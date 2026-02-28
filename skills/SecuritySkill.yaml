@@ -1,0 +1,31 @@
+name: SecuritySkill
+version: 1.0
+purpose: >-
+  Provide prompt-injection defense, read-only defaults, and enforcement of
+  Telegram-only privileged commands for @MasterSDFo7 while coordinating tiered
+  escalation actions.
+triggers:
+  - cron: nightly
+  - on_demand: security_audit
+configuration:
+  telegram_enforcement:
+    allowed_handle: "@MasterSDFo7"
+    command_scope: ["/deploy", "/skill", "/cron"]
+  prompt_injection_defense:
+    policies:
+      - strip_external_instructions: true
+      - sandbox_web_inputs: true
+      - require_explicit_authorization: true
+  read_only_defaults:
+    fs_access: read-only
+    network_access: allowlist
+  escalation_tiers:
+    - tier: 1
+      trigger: suspicious_input
+      action: notify_security_channel
+    - tier: 2
+      trigger: repeated_violation
+      action: lock_external_calls
+    - tier: 3
+      trigger: confirmed_breach
+      action: halt_all_exec + page_owner
