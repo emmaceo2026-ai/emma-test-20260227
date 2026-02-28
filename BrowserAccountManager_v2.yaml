@@ -1,0 +1,9 @@
+name: BrowserAccountManager v2
+description: Manages browser accounts and sessions.
+methods:
+  - name: addAccount
+    description: Adds a new browser account.
+  - name: switchAccount
+    description: Switches to a different browser account.
+  - name: removeAccount
+    description: Removes an existing browser account.

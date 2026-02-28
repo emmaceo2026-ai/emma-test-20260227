@@ -1,0 +1,8 @@
+name: NotionSyncWorker
+ version: 1.0
+ description: Reads and writes data to Notion, syncing with the PARA graph.
+ triggers:
+   - on sync request
+ cost: Medium (Notion API usage)
+ risk: Low (data sync errors)
+ approval_gate: Required for Notion API access.

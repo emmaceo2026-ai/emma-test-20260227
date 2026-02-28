@@ -1,0 +1,10 @@
+name: CompactionSkill
+version: 3.0
+purpose: Manage dynamic pruning and hierarchical memory for large-scale savings.
+triggers:
+  - On high token usage (threshold to activate)
+  - Auto-checkpoint on new sessions
+cost: Low
+risk: Moderate (dependent on performance)
+roi: 70-90% token savings
+test_plan: Validate multi-tier compaction effectiveness.

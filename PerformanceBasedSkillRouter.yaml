@@ -1,0 +1,8 @@
+name: PerformanceBasedSkillRouter
+version: 2.0
+purpose: Routes tasks based on performance metrics, prioritizing efficiency.
+triggers: On task request.
+cost: Low
+risk: Low
+roi: Improved task management.
+test_plan: Validate routing effectiveness.

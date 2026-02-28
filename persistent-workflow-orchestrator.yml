@@ -1,0 +1,8 @@
+name: PersistentWorkflowOrchestrator
+version: 1.0
+description: Orchestrates persistent workflows for long CEO tasks.
+features:
+  - Auto-compact at 25k tokens
+  - Break tasks into small steps delegated to existing workers
+  - Save state in PARA graph
+  - Output checkpoint JSON with 'Paste in new chat to continue' when needed

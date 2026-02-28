@@ -1,0 +1,8 @@
+name: OllamaRouter
+ version: 1.0
+ description: Routes tasks to Ollama models with preferred 8B models, fallback to GPT-4o-mini only if Ollama down.
+ triggers:
+   - on task request
+ cost: Medium (Ollama usage)
+ risk: Low (model performance)
+ approval_gate: Required for high-tier model access.

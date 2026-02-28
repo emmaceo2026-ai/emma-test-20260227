@@ -1,0 +1,7 @@
+name: NotionSyncWorker v2
+description: Syncs data with Notion.
+methods:
+  - name: syncData
+    description: Syncs local data with Notion databases.
+  - name: fetchUpdates
+    description: Fetches updates from Notion databases.

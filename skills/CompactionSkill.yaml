@@ -1,0 +1,64 @@
+# CompactionSkill
+
+### Purpose
+Serve as a low-token memory system designed for managing large-scale, profitable AI projects while ensuring zero loss of information during transfers and handoffs.
+
+### Triggers
+- Engage when memory usage approaches ~80% of token limits to initiate compaction and summarization processes.
+- Activate for tasks that involve extensive memory management, modular delegation, or context retention.
+
+### Architectural Design
+1. **Hierarchical 3-Tiers**:
+   - **Hot**: Immediate essentials (<500 tokens), drawn from Tacit Knowledge. 
+   - **Warm**: Recent summaries stored in daily JSON formats. 
+   - **Cold**: PARA Knowledge Graph archives that include relationships, components, and nightly consolidation workflows.
+
+2. **Dynamic Pruning**:
+   - Implement task-adaptive thresholds to maximize efficiency through selective information retention. 
+   - Utilize intra-trajectory compression to maintain relevant context within ongoing tasks without exceeding memory limits.
+
+3. **External Memory Augmentation**:
+   - Ensure long-context retention via external memory, minimizing bloat and preserving critical information flow.
+
+4. **Standardized Interfaces**:
+   - Integrate with existing structures such as LangChain and LlamaIndex to modularize delegation processes.
+
+### Compaction Process
+- Triggered at ~80% token limit:
+   - Utilize **GPT-4o-mini** for high-fidelity summarization, condensing session records into JSON objects with keys for:
+     - Goals
+     - Current State
+     - Key Outputs
+     - Relationships Graph
+     - Delegated Tasks
+     - Pruned Redundancies
+
+### Modularization Strategy
+- Break large projects into smaller, manageable sub-agents. Delegate operations through YAML calls to existing agents (ReasoningAgent, ResearchAgent, DevelopmentAgent, MarketingAgent) to streamline functionality.
+
+### Retrieval Mechanism
+- Enable local keyword/graph searches on the cold layer (enhanced PARA) for optimal context pulls without relying on external APIs.
+
+### Zero Loss Assurance
+- Apply high-quality LLM distillation combined with full archive retrieval for backup and verification of critical information.
+
+### Step-by-Step Integration Instructions
+1. Place the **CompactionSkill.yaml** file in the `~/workspace/skills/` directory.
+2. Reload the OpenClaw config: Restart the gateway to ensure it's recognized.
+   ```bash
+   openclaw reload
+   ```
+3. Confirm successful addition to the skills list:
+   ```bash
+   openclaw skills list
+   ```
+4. Run tests as outlined in the testing strategy below.
+
+### Testing Strategy
+1. **Small Test**: Compact a summarized long session (simulate 10k tokens to show JSON)
+2. **Medium Test**: Compact a draft outline for an X thread promoting the guide.
+3. **Large Test**: Simulate an MN AI startup launch; ideate product features, code a basic prototype, and prepare a marketing draft; aim to compact mid-session and retrieve to complete.
+
+### Reporting Metrics
+- Aim for **70-90%** token savings with no critical information loss.
+- Identify any local tweaks necessary for optimal operation.

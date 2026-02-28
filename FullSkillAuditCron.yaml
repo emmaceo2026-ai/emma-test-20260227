@@ -1,0 +1,7 @@
+name: FullSkillAuditCron
+description: Schedules and executes audits on all skills.
+timing:
+  frequency: daily
+methods:
+  - name: auditSkills
+    description: Runs and reports audits on all installed skills.

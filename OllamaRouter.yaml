@@ -1,0 +1,9 @@
+name: OllamaRouter
+version: 2.0
+primary_model: qwen2.5:7b-instruct
+purpose: Route tasks to the best Ollama model based on performance.
+triggers: On task request.
+cost: Medium
+risk: Low
+roi: Improved efficiency in task execution.
+test_plan: Validate routing accuracy and performance.

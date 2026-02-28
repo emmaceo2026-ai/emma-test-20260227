@@ -1,0 +1,8 @@
+name: VercelDeployer
+ version: 1.0
+ description: Handles building, previewing, and deploying applications on Vercel.
+ triggers:
+   - on deployment request
+ cost: Low (free tier)
+ risk: Low (deployment issues)
+ approval_gate: Required for deployment.

@@ -1,0 +1,8 @@
+# GitHub Manager Configuration
+version: '1.0'
+services:
+  github:
+    type: GitHubManager
+    settings:
+      repo: 'your-repo'
+      token: 'your-github-token'

@@ -1,0 +1,8 @@
+# Vercel Deployer Configuration
+version: '1.0'
+services:
+  vercel:
+    type: VercelDeployer
+    settings:
+      project: 'your-vercel-project'
+      token: 'your-vercel-token'

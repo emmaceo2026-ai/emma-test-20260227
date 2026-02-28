@@ -1,0 +1,9 @@
+name: GitHubManager v2
+description: Interfaces with GitHub for repositories, issues, and pull requests.
+methods:
+  - name: createIssue
+    description: Creates a new issue in a specified repository.
+  - name: listIssues
+    description: Lists issues from a specified repository.
+  - name: closeIssue
+    description: Closes a specified issue.

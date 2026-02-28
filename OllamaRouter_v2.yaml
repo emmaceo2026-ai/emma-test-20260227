@@ -1,0 +1,7 @@
+name: OllamaRouter v2
+description: Routes requests to appropriate Ollama services.
+methods:
+  - name: routeRequest
+    description: Routes incoming requests to the correct service based on parameters.
+  - name: statusCheck
+    description: Checks the status of routed services.

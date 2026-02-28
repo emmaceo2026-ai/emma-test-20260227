@@ -1,0 +1,8 @@
+name: BrowserAccountManager
+ version: 1.0
+ description: Safely manages Chrome extension controls for user accounts.
+ triggers:
+   - on browser session start
+ cost: Low (free)
+ risk: Moderate (account safety)
+ approval_gate: Required for account access.

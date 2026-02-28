@@ -1,0 +1,3 @@
+PerformanceBasedSkillRouter is set as default for all tasks.
+Primary model confirmed as qwen2.5:7b-instruct.
+Auto-compaction implemented at 20k tokens.

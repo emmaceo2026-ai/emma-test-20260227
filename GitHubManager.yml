@@ -1,0 +1,8 @@
+name: GitHubManager
+ version: 1.0
+ description: Manages GitHub repositories for cloning, committing, PRs, and general repo operations.
+ triggers:
+   - on git event or manual command
+ cost: Low (free tier)
+ risk: Moderate (commit errors & merges)
+ approval_gate: Required for repo access.

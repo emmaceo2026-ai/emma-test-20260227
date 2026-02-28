@@ -1,0 +1,1 @@
+Auto-Deploy: skill2 - /home/user/.openclaw/workspace/skills/skill2-status.md.

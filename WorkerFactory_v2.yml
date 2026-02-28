@@ -1,0 +1,7 @@
+name: WorkerFactory
+version: 2.0
+description: Upgraded worker factory for on-demand worker creation.
+features:
+  - On-demand worker creation
+  - State storage in PARA graph
+  - CompactionSkill tie-in

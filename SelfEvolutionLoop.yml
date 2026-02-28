@@ -1,0 +1,21 @@
+name: SelfEvolutionLoop
+triggers:
+  - after_major_task_completion
+  - cron: '0 23 * * *'
+actions:
+  - action: Reflect
+    details:
+      - Review task completion details (successes and failures)
+      - Assess token and rate-limit metrics
+      - Identify areas for improvement
+  - action: Propose and Implement Improvement
+    details:
+      - Suggest a low-risk enhancement (skill tweak, adding a worker)
+      - Execute the change
+  - action: Log ROI Estimate
+  - action: Compact Session
+  - action: Output
+    details:
+      - Reflection summary
+      - Improvement made
+      - Status

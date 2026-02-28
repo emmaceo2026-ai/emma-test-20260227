@@ -1,0 +1,1 @@
+Ollama Primary: Locked for all reasoning.

@@ -1,0 +1,8 @@
+# Notion Sync Worker Configuration
+version: '1.0'
+services:
+  notion:
+    type: NotionSyncWorker
+    settings:
+      database_id: 'your-database-id'
+      notion_token: 'your-notion-token'
