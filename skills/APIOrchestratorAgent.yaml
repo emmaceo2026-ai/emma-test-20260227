@@ -1,0 +1,25 @@
+name: APIOrchestratorAgent
+version: 1.0
+purpose: Centralize API usage governance (rate limiting, caching, fallback routing) for all skills.
+triggers:
+  - on_demand: api_call
+  - cron: api-health
+configuration:
+  rate_limits:
+    warning_threshold: 70
+    alert_threshold: 90
+    auto_throttle: true
+  caching:
+    warm_cache_dir: "memory/warm-json/api-cache"
+    ttl_seconds: 900
+  fallbacks:
+    secondary_endpoint: "https://api-backup.example.com"
+    retry_policy:
+      max_attempts: 5
+      base_delay: 2
+      jitter: true
+integrations:
+  - telegram_notification_skill
+  - security_skill
+notes: >-
+  Exposes helper script /scripts/api_orchestrator.sh for other skills to source.
